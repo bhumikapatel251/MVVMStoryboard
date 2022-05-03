@@ -18,6 +18,9 @@ class UserViewModel{
                     do{
                         let userResponse = try JSONDecoder().decode([UModel].self, from: data)
                         self.arrUser.append(contentsOf: userResponse)
+                        DispatchQueue.main.async {
+                            self.vc?.tblView.reloadData()
+                        }
                     }catch let err{
                         print(err.localizedDescription)
                             
