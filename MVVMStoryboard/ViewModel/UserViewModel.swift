@@ -17,10 +17,7 @@ class UserViewModel{
                 if let data = data {
                     do{
                         let userResponse = try JSONDecoder().decode([UModel].self, from: data)
-                        for modelUser in userResponse{
-                            arrUser.append(modelUser)
-                        }
-                        print(arrUser)
+                        self.arrUser.append(contentsOf: userResponse)
                     }catch let err{
                         print(err.localizedDescription)
                             
