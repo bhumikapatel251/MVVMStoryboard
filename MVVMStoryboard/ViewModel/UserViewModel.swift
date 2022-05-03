@@ -12,15 +12,18 @@ class UserViewModel{
     var arrUser = [UModel]()
     
     func getAllUserData(){
-        URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/todos/")!) { (data, respose, error) in
+        URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/todos/")!) { [self] (data, respose, error) in
             if error == nil{
                 if let data = data {
                     do{
                         let userResponse = try JSONDecoder().decode([UModel].self, from: data)
-                        print(userResponse)
+                        for modelUser in userResponse{
+                            arrUser.append(modelUser)
+                        }
+                        print(arrUser)
                     }catch let err{
                         print(err.localizedDescription)
-                        
+                            
                     }
                 }
             }else{
