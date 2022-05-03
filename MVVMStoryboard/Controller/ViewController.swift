@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         viewModelUser.vc = self
         // Do any additional setup after loading the view.
-        viewModelUser.getAllUserData()
+        viewModelUser.getAllUserDataAF()
       //  tblView.register(UserCell.self, forCellReuseIdentifier: "UserCell")
         tblView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
     }
