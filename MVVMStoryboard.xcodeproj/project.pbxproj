@@ -13,6 +13,8 @@
 		AC70A7512820FD5D00E78478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70A74F2820FD5D00E78478 /* Main.storyboard */; };
 		AC70A7532820FD6000E78478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC70A7522820FD6000E78478 /* Assets.xcassets */; };
 		AC70A7562820FD6000E78478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC70A7542820FD6000E78478 /* LaunchScreen.storyboard */; };
+		AC70A7622820FEC900E78478 /* UModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70A7612820FEC900E78478 /* UModel.swift */; };
+		AC70A7682821113000E78478 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70A7672821113000E78478 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AC70A7522820FD6000E78478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC70A7552820FD6000E78478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC70A7572820FD6000E78478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC70A7612820FEC900E78478 /* UModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UModel.swift; path = ../../../UModel.swift; sourceTree = "<group>"; };
+		AC70A7672821113000E78478 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		AC70A7482820FD5D00E78478 /* MVVMStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				AC70A7492820FD5D00E78478 /* AppDelegate.swift */,
+				AC70A7602820FDB400E78478 /* Controller */,
+				AC70A75F2820FD9F00E78478 /* View */,
+				AC70A75E2820FD8F00E78478 /* ViewModel */,
+				AC70A75D2820FD6A00E78478 /* Model */,
 				AC70A74B2820FD5D00E78478 /* SceneDelegate.swift */,
-				AC70A74D2820FD5D00E78478 /* ViewController.swift */,
+				AC70A7492820FD5D00E78478 /* AppDelegate.swift */,
 				AC70A74F2820FD5D00E78478 /* Main.storyboard */,
 				AC70A7522820FD6000E78478 /* Assets.xcassets */,
 				AC70A7542820FD6000E78478 /* LaunchScreen.storyboard */,
 				AC70A7572820FD6000E78478 /* Info.plist */,
 			);
 			path = MVVMStoryboard;
+			sourceTree = "<group>";
+		};
+		AC70A75D2820FD6A00E78478 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC70A7612820FEC900E78478 /* UModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC70A75E2820FD8F00E78478 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC70A7672821113000E78478 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC70A75F2820FD9F00E78478 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC70A7602820FDB400E78478 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC70A74D2820FD5D00E78478 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC70A74E2820FD5D00E78478 /* ViewController.swift in Sources */,
+				AC70A7622820FEC900E78478 /* UModel.swift in Sources */,
 				AC70A74A2820FD5D00E78478 /* AppDelegate.swift in Sources */,
+				AC70A7682821113000E78478 /* UserViewModel.swift in Sources */,
 				AC70A74C2820FD5D00E78478 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
